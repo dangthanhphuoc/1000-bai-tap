@@ -1,19 +1,17 @@
 #include <iostream>
-#include <math.h>
 using namespace std;
 	int main (){
-		int i,n;
+		float n;
+		float s=1;
+		
 		do {cout << "nhap n:";
 			cin >> n;
 			if (n<1){ cout <<"n phai lon hon hoac bang 0, nhap lai"<<endl;
 			}
 		}
-		while (n<1)		;
-	
-		int s=0;
-		for (int i=1;i<=n;i++){
-			s=s+pow(i,2);
+		while (n<1)	;
+		for (int a=1;a<=n;a++){
+			s=s+1.0/(2*a+1);	// 1.0 nhu float, de ep kieu s hien thi kq chinh xac.
 		}
-		cout <<"ket qua:"<<s;
-		
+		cout << "ket qua:"<<s;
 	}
